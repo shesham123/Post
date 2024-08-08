@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --very-dark-greyish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --greyish-blue: hsl(212, 23%, 69%);
+  --light-greyish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--light-greyish-blue);
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 32.7rem;
+  border-radius: 1rem;
+  background-color: white;
+  filter: drop-shadow(0 40px 40px rgba(201, 213, 225, 50.35%));
+  display: flex;
+  flex-direction: column;
+}
+
+.card_img-container {
+  width: 100%;
+  height: 20rem;
+}
+
+.card_img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -13px;
+}
+
+.card_text {
+  padding: 3.6rem 3.2rem 2rem;
+}
+
+.card_text h1 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  color: var(--very-dark-greyish-blue);
+}
+
+.card_text p {
+  font-size: 1.3rem;
+  line-height: 1.538;
+  font-weight: 500;
+  letter-spacing: 0.12px;
+  color: var(--desaturated-dark-blue);
+  margin: 1.2rem 0 0;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.2rem 3.2rem;
+}
+
+.author_container {
+  width: 17.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.author_container img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.author_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.author_details .author_details-name {
+  font-weight: 700;
+  color: var(--very-dark-greyish-blue);
+}
+
+.author_details p {
+  margin: 0;
+}
+
+.share-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+}
+
+.share {
+  background-color: var(--very-dark-greyish-blue);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.2rem 3.2rem;
+  position: absolute;
+  width: 100%;
+  transform: translateY(-100%);
+}
+
+.share_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 46.667vw;
+  cursor: pointer;
+}
+
+.share_icons h3 {
+  color: var(--desaturated-dark-blue);
+  font-weight: 500;
+  font-size: 3.467vw;
+  letter-spacing: 5px;
+}
+
+.share_icons-container {
+  width: 9.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share_icons-container img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (width < 375px) {
+  .card {
+    width: 87.2vw;
+  }
+
+  .card_text {
+    padding: 3.6rem 8.533vw 2rem;
+  }
+
+  .card_text h1 {
+    font-size: 4.267vw;
+  }
+
+  .card_text p {
+    font-size: 3.467vw;
+  }
+
+  .author_container {
+    width: 45.867vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 50.694vw;
+    height: 19.444vw;
+    flex-direction: row;
+  }
+
+  .card_img-container {
+    width: 19.792vw;
+    height: 100%;
+  }
+
+  .card_img-container img {
+    width: inherit;
+    object-position: 0;
+  }
+
+  .card_text {
+    padding: 2.222vw 2.778vw 0;
+  }
+
+  .card_text h1 {
+    font-size: 1.389vw;
+  }
+
+  .card_text p {
+    font-size: 0.903vw;
+    margin-top: 0.833vw;
+  }
+
+  .author {
+    padding: 1.389vw 2.778vw;
+  }
+
+  .author_container {
+    width: 11.944vw;
+  }
+
+  .author_container img {
+    width: 2.778vw;
+    height: 2.778vw;
+  }
+
+  .author_details > p {
+    font-size: 0.903vw;
+    margin: 0;
+  }
+
+  .author button {
+    height: 2.222vw;
+    width: 2.222vw;
+  }
+
+  .share {
+    width: 17.222vw;
+    border-radius: 1rem;
+    padding: 1.25vw 2.569vw;
+    right: -4.722vw;
+    transform: translateY(-250%);
+  }
+
+  .share::after {
+    content: "";
+    border: 1.5rem solid transparent;
+    border-top-color: var(--very-dark-greyish-blue);
+    position: absolute;
+    left: 50%;
+    top: 99%;
+    transform: translateX(-50%);
+  }
+
+  .share_icons {
+    width: 12.153vw;
+  }
+
+  .share_icons h3 {
+    font-size: 0.903vw;
+  }
+
+  .share_icons-container {
+    width: 6.389vw;
+  }
+
+  .share_icons-container img {
+    width: 1.389vw;
+    height: 1.389vw;
+  }
+
+  .share > .share-button {
+    display: none;
+  }
+
+  .share-button img {
+    width: 1.042vw;
+    height: 0.903vw;
+  }
+}
